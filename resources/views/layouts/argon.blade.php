@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
-  <title>Skripsi Erika</title>
+  <title>SPPK</title>
   <!-- Favicon -->
   <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -51,11 +51,6 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="../../pages/examples/pricing.html" class="nav-link">
-              <span class="nav-link-inner--text">Pricing</span>
-            </a>
-          </li>
-          <li class="nav-item">
             <a href="../../pages/examples/login.html" class="nav-link">
               <span class="nav-link-inner--text">Login</span>
             </a>
@@ -65,30 +60,25 @@
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="../../pages/examples/lock.html" class="nav-link">
-              <span class="nav-link-inner--text">Lock</span>
-            </a>
-          </li>
         </ul>
         <hr class="d-lg-none" />
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
-              <i class="fab fa-facebook-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Facebook</span>
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://www.instagram.com/creativetimofficial" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Instagram">
+            <a class="nav-link nav-link-icon" href="https://www.facebook.com/abycndra" target="_blank" data-toggle="tooltip" data-original-title="Follow Abiyu on Instagram">
               <i class="fab fa-instagram"></i>
               <span class="nav-link-inner--text d-lg-none">Instagram</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-icon" href="https://twitter.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Follow us on Twitter">
-              <i class="fab fa-twitter-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Twitter</span>
+            <a class="nav-link nav-link-icon" href="https://www.instagram.com/ravlynanda" target="_blank" data-toggle="tooltip" data-original-title="Follow Ravly on Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="nav-link-inner--text d-lg-none">Instagram</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-link-icon" href="https://www.facebook.com/fido.firdaus" target="_blank" data-toggle="tooltip" data-original-title="Follow Fido on Instagram">
+              <i class="fab fa-instagram"></i>
+              <span class="nav-link-inner--text d-lg-none">Instagram</span>
             </a>
           </li>
           <li class="nav-item">
@@ -109,6 +99,8 @@
       </div>
     </div>
   </nav>
+  <!-- sidebar -->
+  @include('layouts.sidebar')
   <!-- Main content -->
   @yield('content')
   <!-- Core -->
