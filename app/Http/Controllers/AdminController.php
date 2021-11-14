@@ -14,4 +14,8 @@ class AdminController extends Controller
     {
         return view('compare.index');
     }
+    public function show()
+    {
+        return view('compare.show');
+    }
 }
