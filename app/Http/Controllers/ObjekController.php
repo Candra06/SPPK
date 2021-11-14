@@ -14,7 +14,7 @@ class ObjekController extends Controller
 
     public function create()
     {
-        //
+        return view('object.create');
     }
 
     /**
