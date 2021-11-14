@@ -9,7 +9,7 @@ class ObjekController extends Controller
 {
     public function index()
     {
-        return view('dashboard');
+        return view('object.index');
     }
 
     public function create()

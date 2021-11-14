@@ -14,6 +14,7 @@
   <!-- Icons -->
   <link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="../../assets/vendor/@fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <script src="https://kit.fontawesome.com/7aa3d8bada.js" crossorigin="anonymous"></script>
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../../assets/css/argon.css?v=1.1.0" type="text/css">
 </head>
@@ -60,6 +61,21 @@
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
+          <!-- Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Smartphone</a>
+            <div class="dropdown-menu dropdown-menu dropdown-menu-right py-0 overflow-hidden">
+              <!-- List group -->
+              <a href="{{url('objek')}}" class="dropdown-item">
+                <i class="ni ni-single-02"></i>
+                <span>Index</span>
+              </a>
+              <a href="#!" class="dropdown-item">
+                <i class="ni ni-settings-gear-65"></i>
+                <span>Create</span>
+              </a>
+            </div>
+          </li>
         </ul>
         <hr class="d-lg-none" />
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
@@ -99,8 +115,6 @@
       </div>
     </div>
   </nav>
-  <!-- sidebar -->
-  @include('layouts.sidebar')
   <!-- Main content -->
   @yield('content')
   <!-- Core -->
