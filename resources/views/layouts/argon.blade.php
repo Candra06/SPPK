@@ -23,7 +23,7 @@
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="../../pages/dashboards/dashboard.html">
+      <a class="navbar-brand" href="{{url('objek')}}">
         <img src="../../assets/img/brand/white.png">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="../../pages/dashboards/dashboard.html">
+              <a href="{{url('objek')}}">
                 <img src="../../assets/img/brand/blue.png">
               </a>
             </div>
@@ -47,17 +47,17 @@
         </div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="../../pages/dashboards/dashboard.html" class="nav-link">
+            <a href="{{url('objek')}}" class="nav-link">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../../pages/examples/login.html" class="nav-link">
+            <a href="{{url('login')}}" class="nav-link">
               <span class="nav-link-inner--text">Login</span>
             </a>
           </li>
           <li class="nav-item">
-            <a href="../../pages/examples/register.html" class="nav-link">
+            <a href="{{url('register')}}" class="nav-link">
               <span class="nav-link-inner--text">Register</span>
             </a>
           </li>
@@ -70,7 +70,7 @@
                 <i class="fas fa-list-ul"></i>
                 <span>Index</span>
               </a>
-              <a href="#!" class="dropdown-item">
+              <a href="{{url('objek/create')}}" class="dropdown-item">
                 <i class="fas fa-plus"></i>
                 <span>Create</span>
               </a>
@@ -85,7 +85,7 @@
                 <i class="fas fa-list-ul"></i>
                 <span>Index</span>
               </a>
-              <a href="#" class="dropdown-item">
+              <a href="{{url('kriteria/create')}}" class="dropdown-item">
                 <i class="fas fa-plus"></i>
                 <span>Create</span>
               </a>

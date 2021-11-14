@@ -15,11 +15,11 @@
                         <div class="card-body">
                             <div class="form-group">
                                 <label class="form-control-label">Nama Kriteria</label>
-                                <input class="form-control form-control-sm" type="text" placeholder=".form-control-sm">
+                                <input class="form-control form-control-sm" type="text" placeholder="nama kriteria">
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Bobot</label>
-                                <input class="form-control form-control-sm" type="number" placeholder=".form-control-sm">
+                                <input class="form-control form-control-sm" type="number" placeholder="bobot">
                             </div>
                         </div>
                         <div class="card-footer text-center">
