@@ -10,6 +10,7 @@
                 <div class="card">
                     <!-- Card image -->
                     <img class="card-img-top" src="{{asset('assets/img/theme/samsung s10.jpg')}}" alt="Image placeholder" style="height:200px; object-fit: cover;">
+                    <span class="product-tags">1st</span>
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">Samsung S10</h4>
@@ -48,6 +49,7 @@
                 <div class="card">
                     <!-- Card image -->
                     <img class="card-img-top" src="{{asset('assets/img/theme/samsung s9.jpg')}}" alt="Image placeholder" style="height:200px; max-height:200px; object-fit: cover;">
+                    <span class="product-tags">2nd</span>
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">Samsung S9</h4>
@@ -86,6 +88,7 @@
                 <div class="card">
                     <!-- Card image -->
                     <img class="card-img-top" src="{{asset('assets/img/theme/xiaomi redmi note 10.jpeg')}}" alt="Image placeholder" style="height:200px; object-fit: cover;">
+                    <span class="product-tags">3rd</span>
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">Xiaomi Redmi Note 10</h4>

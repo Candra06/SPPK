@@ -5981,6 +5981,21 @@ input[type='button'].btn-block
     border-bottom-left-radius: .375rem;
 }
 
+.card .product-tags {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 9;
+    padding: 0 12px;
+    border-radius: 3px;
+    background-color: var(--primary);
+    font-size: 12px;
+    line-height: 20px;
+    height: 20px;
+    display: inline-block;
+    color: #ffffff;
+  }
+
 .card-body
 {
     padding: 1.5rem; 
