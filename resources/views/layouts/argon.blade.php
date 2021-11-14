@@ -23,7 +23,7 @@
   <!-- Navbar -->
   <nav id="navbar-main" class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light">
     <div class="container">
-      <a class="navbar-brand" href="{{url('objek')}}">
+      <a class="navbar-brand" href="{{url('dashboard')}}">
         <img src="../../assets/img/brand/white.png">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,7 +33,7 @@
         <div class="navbar-collapse-header">
           <div class="row">
             <div class="col-6 collapse-brand">
-              <a href="{{url('objek')}}">
+              <a href="{{url('dashboard')}}">
                 <img src="../../assets/img/brand/blue.png">
               </a>
             </div>
@@ -47,7 +47,7 @@
         </div>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a href="{{url('objek')}}" class="nav-link">
+            <a href="{{url('dashboard')}}" class="nav-link">
               <span class="nav-link-inner--text">Dashboard</span>
             </a>
           </li>
@@ -59,6 +59,11 @@
           <li class="nav-item">
             <a href="{{url('register')}}" class="nav-link">
               <span class="nav-link-inner--text">Register</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="{{url('compare')}}" class="nav-link">
+              <span class="nav-link-inner--text">Compare</span>
             </a>
           </li>
           <!-- Dropdown Menu -->
