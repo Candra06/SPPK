@@ -67,11 +67,26 @@
             <div class="dropdown-menu dropdown-menu dropdown-menu-right py-0 overflow-hidden">
               <!-- List group -->
               <a href="{{url('objek')}}" class="dropdown-item">
-                <i class="ni ni-single-02"></i>
+                <i class="fas fa-list-ul"></i>
                 <span>Index</span>
               </a>
               <a href="#!" class="dropdown-item">
-                <i class="ni ni-settings-gear-65"></i>
+                <i class="fas fa-plus"></i>
+                <span>Create</span>
+              </a>
+            </div>
+          </li>
+          <!-- Dropdown Menu -->
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Kriteria</a>
+            <div class="dropdown-menu dropdown-menu dropdown-menu-right py-0 overflow-hidden">
+              <!-- List group -->
+              <a href="{{url('kriteria')}}" class="dropdown-item">
+                <i class="fas fa-list-ul"></i>
+                <span>Index</span>
+              </a>
+              <a href="#" class="dropdown-item">
+                <i class="fas fa-plus"></i>
                 <span>Create</span>
               </a>
             </div>

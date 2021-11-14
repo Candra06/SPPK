@@ -9,8 +9,14 @@
             <div class="col-lg-5 col-md-7">
                 <div class="card">
                     <div class="card-header">
-                        <!-- Title -->
-                        <h5 class="h3 mb-0">Daftar Smartphone</h5>
+                        <div class="row">
+                            <div class="col-auto">
+                                <h5 class="h3 mb-0">Daftar Smartphone</h5>
+                            </div>
+                            <div class="col text-right">
+                                <button class="btn btn-sm btn-primary"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <!-- List group -->
