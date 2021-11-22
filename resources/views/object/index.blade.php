@@ -28,8 +28,31 @@
                                     </div>
                                     <div class="col-3">
                                         <!-- Avatar -->
-                                        <a href="#" class="avatar rounded-circle">
-                                            <img alt="Image placeholder" src="../../assets/img/theme/bootstrap.jpg">
+                                        <a href="#">
+                                            <img class="card-img" src="{{asset('assets/img/theme/samsung s10.jpg')}}" alt="Image placeholder" style="object-fit: cover;">
+                                        </a>
+                                    </div>
+                                    <div class="col">
+                                        <div class="row">
+                                            <div class="col">
+                                                <h5>Samsung</h5>
+                                            </div>
+                                            <div class="col">
+                                                <h5>Galaxy S10</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item px-0">
+                                <div class="row align-items-center">
+                                    <div class="col-3 col-sm-2 col-lg-2">
+                                        <h5>2nd</h5>
+                                    </div>
+                                    <div class="col-3">
+                                        <!-- Avatar -->
+                                        <a href="#">
+                                            <img class="card-img" src="{{asset('assets/img/theme/samsung s9.jpg')}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
                                     <div class="col">
@@ -51,8 +74,8 @@
                                     </div>
                                     <div class="col-3">
                                         <!-- Avatar -->
-                                        <a href="#" class="avatar rounded-circle">
-                                            <img alt="Image placeholder" src="../../assets/img/theme/bootstrap.jpg">
+                                        <a href="#">
+                                            <img class="card-img" src="{{asset('assets/img/theme/xiaomi redmi note 10.jpeg')}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
                                     <div class="col">
@@ -61,7 +84,7 @@
                                                 <h5>Xiaomi</h5>
                                             </div>
                                             <div class="col">
-                                                <h5>Redmi Note 11</h5>
+                                                <h5>Redmi Note 10</h5>
                                             </div>
                                         </div>
                                     </div>

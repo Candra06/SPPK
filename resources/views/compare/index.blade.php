@@ -18,7 +18,6 @@
                                 <select class="form-control" id="exampleFormControlSelect1">
                                     <option>Samsung S9</option>
                                     <option>Samsung S10</option>
-                                    <option>ROG Phone 2</option>
                                     <option>Xiaomi Redmi Note 10</option>
                                 </select>
                             </div>
@@ -27,7 +26,6 @@
                                 <select class="form-control" id="exampleFormControlSelect2">
                                     <option>Samsung S9</option>
                                     <option>Samsung S10</option>
-                                    <option>ROG Phone 2</option>
                                     <option>Xiaomi Redmi Note 10</option>
                                 </select>
                             </div>
@@ -36,16 +34,6 @@
                                 <select class="form-control" id="exampleFormControlSelect3">
                                     <option>Samsung S9</option>
                                     <option>Samsung S10</option>
-                                    <option>ROG Phone 2</option>
-                                    <option>Xiaomi Redmi Note 10</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label class="form-control-label" for="exampleFormControlSelect4">Smartphone 4</label>
-                                <select class="form-control" id="exampleFormControlSelect4">
-                                    <option>Samsung S9</option>
-                                    <option>Samsung S10</option>
-                                    <option>ROG Phone 2</option>
                                     <option>Xiaomi Redmi Note 10</option>
                                 </select>
                             </div>
