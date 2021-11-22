@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
 });
 Route::get('dashboard', 'AdminController@dashboard');
 Route::get('compare', 'AdminController@compare');
