@@ -9,7 +9,8 @@ class KriteriaController extends Controller
 {
     public function index()
     {
-        return view('kriteria.index');
+        $data = Kriteria::all();
+        return view('kriteria.index', compact('data'));
     }
 
     public function create()
@@ -17,10 +18,23 @@ class KriteriaController extends Controller
         return view('kriteria.create');
     }
 
-    
+
     public function store(Request $request)
     {
-        //
+
+        $request->validate([
+            'kriteria' => 'required',
+            'bobot' => 'required',
+        ]);
+
+        try {
+            $input['kriteria'] = $request['kriteria'];
+            $input['bobot'] = $request['bobot'];
+            Kriteria::create($input);
+            return redirect('/kriteria')->with('status', 'Berhasil menambahkan data');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**
@@ -29,7 +43,7 @@ class KriteriaController extends Controller
      * @param  \App\Kriteria  $kriteria
      * @return \Illuminate\Http\Response
      */
-    public function show(Kriteria $kriteria)
+    public function show(Kriteria $kriterium)
     {
         //
     }
@@ -40,9 +54,10 @@ class KriteriaController extends Controller
      * @param  \App\Kriteria  $kriteria
      * @return \Illuminate\Http\Response
      */
-    public function edit(Kriteria $kriteria)
+    public function edit(Kriteria $kriterium)
     {
-        //
+        // return $kriterium;
+        return view('kriteria.edit', compact('kriterium'));
     }
 
     /**
@@ -52,9 +67,21 @@ class KriteriaController extends Controller
      * @param  \App\Kriteria  $kriteria
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Kriteria $kriteria)
+    public function update(Request $request, Kriteria $kriterium)
     {
-        //
+        $request->validate([
+            'kriteria' => 'required',
+            'bobot' => 'required',
+        ]);
+
+        try {
+            $input['kriteria'] = $request['kriteria'];
+            $input['bobot'] = $request['bobot'];
+            Kriteria::where('id', $kriterium->id)->update($input);
+            return redirect('/kriteria')->with('status', 'Berhasil mengubah data');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 
     /**
@@ -63,8 +90,13 @@ class KriteriaController extends Controller
      * @param  \App\Kriteria  $kriteria
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Kriteria $kriteria)
+    public function destroy(Kriteria $kriterium)
     {
-        //
+        try {
+            Kriteria::where('id', $kriterium->id)->delete();
+            return redirect('/kriteria')->with('status', 'Berhasil menghapus data');
+        } catch (\Throwable $th) {
+            throw $th;
+        }
     }
 }

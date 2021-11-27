@@ -9,8 +9,9 @@ Route::get('dashboard', 'AdminController@dashboard');
 Route::get('compare', 'AdminController@compare');
 Route::get('compare/show', 'AdminController@show');
 
-Route::get('objek', 'ObjekController@index');
-Route::get('objek/create', 'ObjekController@create');
-
-Route::get('kriteria', 'KriteriaController@index');
-Route::get('kriteria/create', 'KriteriaController@create');
+Route::resource('kriteria', 'KriteriaController');
+Route::resource('objek', 'ObjekController');
+Route::resource('value', 'ValuePenilaianController');
+Route::get('/getValue', 'ValuePenilaianController@show');
+Route::post('spek/{idobjek}', 'SpecObjekController@store');
+Route::delete('spek/{id}/{idobjek}', 'SpecObjekController@destroy');
