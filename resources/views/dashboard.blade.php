@@ -23,16 +23,16 @@
                         <ul class="list-group list-group-flush list my--3">
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
-                                    <div class="col-3 col-sm-2 col-lg-2">
+                                    <div class="col-2">
                                         <h5>1st</h5>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4 col-sm-3">
                                         <!-- Avatar -->
                                         <a href="#">
                                             <img class="card-img" src="{{asset('assets/img/theme/samsung s10.jpg')}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-4 col-sm-5">
                                         <div class="row">
                                             <div class="col">
                                                 <h5>Samsung</h5>
@@ -42,20 +42,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-2"><button class="btn btn-sm btn-info">edit</button></div>
                                 </div>
                             </li>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
-                                    <div class="col-3 col-sm-2 col-lg-2">
+                                    <div class="col-2">
                                         <h5>2nd</h5>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4 col-sm-3">
                                         <!-- Avatar -->
                                         <a href="#">
                                             <img class="card-img" src="{{asset('assets/img/theme/samsung s9.jpg')}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-4 col-sm-5">
                                         <div class="row">
                                             <div class="col">
                                                 <h5>Samsung</h5>
@@ -65,20 +66,21 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-2"><button class="btn btn-sm btn-info">edit</button></div>
                                 </div>
                             </li>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
-                                    <div class="col-3 col-sm-2 col-lg-2">
-                                        <h5>2nd</h5>
+                                    <div class="col-2">
+                                        <h5>3rd</h5>
                                     </div>
-                                    <div class="col-3">
+                                    <div class="col-4 col-sm-3">
                                         <!-- Avatar -->
                                         <a href="#">
                                             <img class="card-img" src="{{asset('assets/img/theme/xiaomi redmi note 10.jpeg')}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
-                                    <div class="col">
+                                    <div class="col-4 col-sm-5">
                                         <div class="row">
                                             <div class="col">
                                                 <h5>Xiaomi</h5>
@@ -88,6 +90,7 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-2"><button class="btn btn-sm btn-info">edit</button></div>
                                 </div>
                             </li>
                         </ul>

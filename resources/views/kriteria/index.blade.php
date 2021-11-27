@@ -13,9 +13,6 @@
                             <div class="col-auto">
                                 <h5 class="h3 mb-0">Daftar Kriteria</h5>
                             </div>
-                            <div class="col text-right">
-                                <a href="{{url('kriteria/create')}}" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i></a>
-                            </div>
                         </div>
                     </div>
                     <div class="card-body">
