@@ -32,7 +32,7 @@
                                     <div class="col-4 col-sm-3">
                                         <!-- Photo -->
                                         <a href="{{ url('/objek/' . $item->id ) }}">
-                                            <img class="card-img" src="{{asset('assets/img/theme/samsung s10.jpg')}}" alt="Image placeholder" style="object-fit: cover;">
+                                            <img class="card-img" src="{{ asset('storage/app/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-5">

@@ -26,7 +26,7 @@
 
                                 </div>
                                 <div class="form-group">
-                                    <label class="form-control-label">Vallue</label>
+                                    <label class="form-control-label">Value</label>
                                     <input class="form-control form-control-sm" type="text" name="value"
                                         value="{{$value->value}}"
                                         placeholder="Nama Value">
