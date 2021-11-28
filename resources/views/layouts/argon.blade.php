@@ -69,37 +69,15 @@
                             <span class="nav-link-inner--text">Compare</span>
                         </a>
                     </li>
-                    <!-- Dropdown Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">Smartphone</a>
-                        <div class="dropdown-menu dropdown-menu dropdown-menu-right py-0 overflow-hidden">
-                            <!-- List group -->
-                            <a href="{{ url('objek') }}" class="dropdown-item">
-                                <i class="fas fa-list-ul"></i>
-                                <span>Index</span>
-                            </a>
-                            <a href="{{ url('objek/create') }}" class="dropdown-item">
-                                <i class="fas fa-plus"></i>
-                                <span>Create</span>
-                            </a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="{{ url('objek') }}" class="nav-link">
+                            <span class="nav-link-inner--text">Smartphone</span>
+                        </a>
                     </li>
-                    <!-- Dropdown Menu -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                            aria-expanded="false">Kriteria</a>
-                        <div class="dropdown-menu dropdown-menu dropdown-menu-right py-0 overflow-hidden">
-                            <!-- List group -->
-                            <a href="{{ url('kriteria') }}" class="dropdown-item">
-                                <i class="fas fa-list-ul"></i>
-                                <span>Index</span>
-                            </a>
-                            <a href="{{ url('kriteria/create') }}" class="dropdown-item">
-                                <i class="fas fa-plus"></i>
-                                <span>Create</span>
-                            </a>
-                        </div>
+                    <li class="nav-item">
+                        <a href="{{ url('kriteria') }}" class="nav-link">
+                            <span class="nav-link-inner--text">Kriteria</span>
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="{{ url('value') }}" class="nav-link">

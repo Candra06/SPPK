@@ -32,11 +32,9 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Gambar</label>
-                                            <input class="form-control form-control-sm" type="file" name="gambar"
-                                                placeholder="gambar">
+                                            <input type="file"  class="form-control" id="customFileLang" lang="en">
                                         </div>
                                     </div>
-
                                 </div>
                                 {{-- <fieldset class="border p-2">
                                     <legend class="w-auto">Spesifikasi</legend>

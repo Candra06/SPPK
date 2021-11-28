@@ -15,8 +15,8 @@
                                 </div>
                                 <div class="col text-right">
                                     <a href="{{ url('/objek/create') }}" class="btn btn-sm btn-primary"><i
-                                            class="fas fa-plus"></i></a>
-
+                                        class="fas fa-plus"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
