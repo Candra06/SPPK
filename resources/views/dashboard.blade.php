@@ -21,8 +21,8 @@
                     <div class="card-body">
                         <!-- List group -->
                         <ul class="list-group list-group-flush list my--3">
-                        <?php $no = 0; ?>
-                        @foreach ($objek as $item)
+                            <?php $no = 0; ?>
+                            @foreach ($objek as $item)
                             <?php $no++ ?>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
@@ -32,7 +32,7 @@
                                     <div class="col-4 col-sm-3">
                                         <!-- Photo -->
                                         <a href="{{ url('/objek/' . $item->id ) }}">
-                                            <img class="card-img" src="{{ asset('storage/app/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: cover;">
+                                            <img class="card-img" src="{{ URL('storage/'.$item->gambar)}}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-5">
@@ -61,8 +61,8 @@
                                     </div>
                                 </div>
                             </li>
+                            @endforeach
                         </ul>
-                        @endforeach
                     </div>
                 </div>
             </div>

@@ -32,7 +32,7 @@
                                     <div class="col-md-4">
                                         <div class="form-group">
                                             <label class="form-control-label">Gambar</label>
-                                            <input type="file" name="gambar" class="form-control" id="customFileLang" lang="en">
+                                            <input type="file" name="gambar"  class="form-control" id="customFileLang" lang="en">
                                         </div>
                                     </div>
                                 </div>
