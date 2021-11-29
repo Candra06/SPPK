@@ -34,7 +34,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Gambar</label>
-                                <img src="{{asset($objek->gambar)}}" alt="" srcset=""  style="width: 100%; height: 100%; object-fit: cover; margin-bottom:10px">
+                                <img src="{{asset('storage/' . $objek->gambar)}}" alt="" srcset=""  style="width: 100%; height: 100%; object-fit: cover; margin-bottom:10px">
                                 <input class="form-control" type="file" name="gambar" data-="" placeholder="gambar">
                                 <i for=""><span style="color: red">*</span>Biarkan kosong jika tidak ingin merubah gambar</i>
                             </div>

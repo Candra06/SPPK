@@ -46,7 +46,7 @@
                                     <div class="col-md-12">
                                         <div class="form-group">
                                             <label class="form-control-label">Gambar</label>
-                                            <img src="{{ asset($objek->gambar) }}" alt="" srcset=""
+                                            <img src="{{ asset( 'storage/' . $objek->gambar) }}" alt="" srcset=""
                                                 style="width: 100%; height: 100%; object-fit: cover; margin-bottom:10px">
 
                                         </div>

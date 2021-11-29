@@ -13,10 +13,6 @@
                                 <div class="col-auto">
                                     <h5 class="h3 mb-0">Daftar Kriteria</h5>
                                 </div>
-                                <div class="col text-right">
-                                    <a href="{{ url('kriteria/create') }}" class="btn btn-sm btn-primary"><i
-                                            class="fas fa-plus"></i></a>
-                                </div>
                             </div>
                         </div>
                         @if (session('status'))
@@ -45,9 +41,6 @@
                                         <div class="col">
                                             <h5>Bobot</h5>
                                         </div>
-                                        <div class="col">
-                                            <h5>Aksi</h5>
-                                        </div>
                                     </div>
                                 </li>
                                 @php
@@ -57,7 +50,7 @@
 
                                     <li class="list-group-item px-0">
                                         <div class="row align-items-center">
-                                            <div class="col-3 col-sm-2 col-lg-2">
+                                            <div class="col-3 col-sm-2">
                                                 <h5>{{ $i }}</h5>
                                             </div>
                                             <div class="col">
@@ -66,7 +59,7 @@
                                             <div class="col">
                                                 <h5>{{ $item->bobot }}</h5>
                                             </div>
-                                            <div class="col">
+                                            <!-- <div class="col">
                                                 <h5>
                                                     <a href="{{ url('/kriteria/' . $item->id . '/edit') }}"><i
                                                             class="fas fa-edit"></i></a>
@@ -80,7 +73,7 @@
                                                     {{-- <a href=""><i class="fas fa-trash"></i></a> --}}
                                                 </h5>
 
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
                                     @php

@@ -47,7 +47,7 @@ class ObjekController extends Controller
             $input['status'] = 'Active';
             $input['gambar'] = Storage::putFileAs('gambar', $request->file('gambar'), $name);
             Objek::create($input);
-            return redirect('/objek')->with('status', 'Berhasil menambahkan data');
+            return redirect('/dashboard')->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -77,7 +77,6 @@ class ObjekController extends Controller
      */
     public function edit(Objek $objek)
     {
-        // return $objek;
         return view('object.edit', compact('objek'));
     }
 
@@ -108,7 +107,7 @@ class ObjekController extends Controller
             $input['status'] = $request['status'];
 
             Objek::where('id', $objek->id)->update($input);
-            return redirect('/objek')->with('status', 'Berhasil menambahkan data');
+            return redirect('/dashboard')->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -124,7 +123,7 @@ class ObjekController extends Controller
     {
         try {
             Objek::where('id', $objek->id)->delete();
-            return redirect('/objek')->with('status', 'Berhasil menghapus data');
+            return redirect('/dashboard')->with('status', 'Berhasil menghapus data');
         } catch (\Throwable $th) {
             throw $th;
         }

@@ -26,13 +26,13 @@
                             <?php $no++ ?>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
-                                    <div class="col-2">
+                                    <div class="col-1 col-sm-2">
                                         <h5>{{ $no }}</h5>
                                     </div>
                                     <div class="col-4 col-sm-3">
                                         <!-- Photo -->
                                         <a href="{{ url('/objek/' . $item->id ) }}">
-                                            <img class="card-img" src="{{ asset('storage/app/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: cover;">
+                                            <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: cover;">
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-5">
@@ -46,18 +46,18 @@
                                         </div>
                                     </div>
                                     <div class="col-2">
-                                        <a href="{{ url('/objek/' . $item->id . '/edit') }}">
-                                            <i class="fas fa-edit"></i></a>
-                                        {{-- <a href="{{ url('/objek/' . $item->id ) }}">
-                                            <i class="fas fa-eye"></i></a> --}}
-                                        @php
-                                            $linkdelete = url('/objek/' . $item->id);
-                                        @endphp
-                                        <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
-                                            <i class="fas fa-trash"></i>
-                                        </a>
-
-                                        {{-- <a href=""><i class="fas fa-trash"></i></a> --}}
+                                        <h5>
+                                            <a href="{{ url('/objek/' . $item->id . '/edit') }}">
+                                                <i class="fas fa-edit"></i></a>
+                                            {{-- <a href="{{ url('/objek/' . $item->id ) }}">
+                                                <i class="fas fa-eye"></i></a> --}}
+                                            @php
+                                                $linkdelete = url('/objek/' . $item->id);
+                                            @endphp
+                                            <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </h5>
                                     </div>
                                 </div>
                             </li>
