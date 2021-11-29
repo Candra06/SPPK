@@ -32,7 +32,7 @@
                                                 <a href="#">
                                                     <div class="image"
                                                         style="width: 60px; height: 60px; margin: 8px">
-                                                        <img src="{{ asset($item->gambar) }}"
+                                                        <img src="{{ URL('storage/'.$item->gambar)}}"
                                                             style="width: 100%; height: 100%; object-fit: cover;">
                                                     </div>
                                                 </a>
