@@ -45,10 +45,11 @@
                                     </div>
                                     <div class="col-md-12">
                                         <div class="form-group">
-                                            <label class="form-control-label">Gambar</label>
-                                            <img src="{{ asset($objek->gambar) }}" alt="" srcset=""
-                                                style="width: 100%; height: 100%; object-fit: cover; margin-bottom:10px">
-
+                                            <label class="form-control-label">Gambar</label><br>
+                                            <div class="text-center">
+                                                <img src="{{ URL('storage/'.$objek->gambar)}}" alt="" srcset=""
+                                                    style="width: 70%; height: 70%; object-fit: cover; margin-bottom:10px">
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="col-md-12">
