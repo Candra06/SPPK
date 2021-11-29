@@ -21,8 +21,8 @@
                     <div class="card-body">
                         <!-- List group -->
                         <ul class="list-group list-group-flush list my--3">
-                        <?php $no = 0; ?>
-                        @foreach ($objek as $item)
+                            <?php $no = 0; ?>
+                            @foreach ($objek as $item)
                             <?php $no++ ?>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
@@ -61,8 +61,8 @@
                                     </div>
                                 </div>
                             </li>
+                            @endforeach
                         </ul>
-                        @endforeach
                     </div>
                 </div>
             </div>
