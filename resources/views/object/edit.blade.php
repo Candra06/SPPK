@@ -6,7 +6,7 @@
         <div class="row justify-content-center">
 
         <!-- Content Area -->
-            <div class="col-lg-5 col-md-7">
+            <div class="col-lg-7 col-md-7">
                 <div class="card">
                     <form action="{{ url('/objek/'.$objek->id)}}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
@@ -39,11 +39,36 @@
                                 <i for=""><span style="color: red">*</span>Biarkan kosong jika tidak ingin merubah gambar</i>
                             </div>
                         </div>
-                        <div class="card-footer text-center">
-                            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
-
-
+                       
+                        <div class="card-body">
+                            <fieldset class="border p-2">
+                                <legend class="w-auto">Spesifikasi
+                                    <button data-toggle="modal" data-target="#modal_add{{ $objek->id }}" type="button" class="btn btn-sm btn-success "><span class="fas fa-plus"></span> Tambah Kriteria</button>
+                                
+                                </legend>
+                                <div class="row p-3">
+                                    @foreach ($spek as $i)
+                                        <div class="col-3">
+                                            <label for="">{{ $i->kriteria }}</label>
+                                        </div>
+                                        <div class="col-3">
+                                            <label for="">{{ $i->value }}</label>
+                                            
+                                            @php
+                                                $linkdelete = url('/spek/' . $i->id.'/'.$objek->id);
+                                            @endphp
+                                            <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </fieldset>
                         </div>
+
+                        <div class="card-footer border-0 text-center">
+                            <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+                        </div>    
                     </form>
                 </div>
             </div>

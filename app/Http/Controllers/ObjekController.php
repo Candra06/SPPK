@@ -77,7 +77,13 @@ class ObjekController extends Controller
      */
     public function edit(Objek $objek)
     {
-        return view('object.edit', compact('objek'));
+        $spek = SpecObjek::leftJoin('kriteria', 'kriteria.id', 'detail_objek.id_kriteria')
+            ->leftJoin('value_penilaian', 'value_penilaian.id', 'detail_objek.id_value')
+            ->select('kriteria.kriteria', 'value_penilaian.value', 'detail_objek.id')
+            ->where('detail_objek.id_objek', $objek->id)->get();
+        $kriteria = Kriteria::all();
+        
+        return view('object.edit', compact('objek', 'spek', 'kriteria'));
     }
 
     /**
