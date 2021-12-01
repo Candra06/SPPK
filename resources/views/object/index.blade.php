@@ -27,7 +27,9 @@
                                                 <h5>{{ $no }}</h5>
                                             </div>
                                             <div class="col-4">
-                                                <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" style="object-fit: cover;">
+                                                <a href="{{ url('/objek/' . $item->id ) }}">
+                                                    <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" style="object-fit: cover;">
+                                                </a>
                                             </div>
                                             <div class="col-5">
                                                 <h5>{{ $item->merk . ' ' . $item->type }}</h5>

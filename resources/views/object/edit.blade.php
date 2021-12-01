@@ -11,7 +11,7 @@
                     <form action="{{ url('/objek/'.$objek->id)}}" method="POST" enctype="multipart/form-data">
                         @method('PUT')
                         @csrf
-                        <div class="card-header">
+                        <div class="card-header rounded">
                             <h5 class="h3 mb-0">Edit Objek</h5>
                         </div>
                         <div class="card-body">
@@ -34,9 +34,11 @@
                             </div>
                             <div class="form-group">
                                 <label class="form-control-label">Gambar</label>
-                                <img src="{{asset('storage/' . $objek->gambar)}}" alt="" srcset=""  style="width: 100%; height: 100%; object-fit: cover; margin-bottom:10px">
-                                <input class="form-control" type="file" name="gambar" data-="" placeholder="gambar">
-                                <i for=""><span style="color: red">*</span>Biarkan kosong jika tidak ingin merubah gambar</i>
+                                <div class="row justify-content-center">
+                                    <img src="{{asset('storage/' . $objek->gambar)}}" style="object-fit:contain; max-height:400px;" class="card-img mb-3">
+                                    <input class="form-control" type="file" name="gambar" data-="" placeholder="gambar">
+                                    <i for=""><span style="color: red">*</span>Biarkan kosong jika tidak ingin merubah gambar</i>
+                                </div>
                             </div>
                         </div>
                        
@@ -76,4 +78,41 @@
         </div>
     </div>
 </div>
+<script>
+    function modal_add{{ $objek->id }}(url) {
+        // $('#modal_delete').modal('show', {
+        //     backdrop: 'static'
+        // });
+        document.formdelete.action = url;
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript">
+    $('#kriteria').change(function() {
+        var id_kriteria = $(this).val();
+        if (id_kriteria) {
+            $.ajax({
+                type: "GET",
+                url: "/getValue?kriteria=" + id_kriteria,
+                dataType: 'JSON',
+                success: function(res) {
+                    console.log(res);
+                    if (res) {
+                        $("#valueKriteria").empty();
+                        $("#valueKriteria").append('<option>---Pilih Value---</option>');
+                        $.each(res, function(kriteria, id) {
+                            $("#valueKriteria").append('<option value="' + id + '">' +
+                                kriteria +
+                                '</option>');
+                        });
+                    } else {
+                        $("#valueKriteria").empty();
+                    }
+                }
+            });
+        } else {
+            $("#valueKriteria").empty();
+        }
+    });
+</script>
 @endsection

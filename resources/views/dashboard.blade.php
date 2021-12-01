@@ -26,13 +26,13 @@
                             <?php $no++ ?>
                             <li class="list-group-item px-0">
                                 <div class="row align-items-center">
-                                    <div class="col-1 col-sm-2">
+                                    <div class="col-1 col-sm-1">
                                         <h5>{{ $no }}</h5>
                                     </div>
-                                    <div class="col-4 col-sm-3">
+                                    <div class="col-4 col-sm-4">
                                         <!-- Photo -->
                                         <a href="{{ url('/objek/' . $item->id ) }}">
-                                            <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: cover;">
+                                            <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="object-fit: contain;">
                                         </a>
                                     </div>
                                     <div class="col-4 col-sm-5">
