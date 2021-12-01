@@ -6,7 +6,7 @@
         <div class="row justify-content-center">  
             
         <!-- Smartphone Area -->
-            <div class="col-lg-5 col-md-7">
+            <div class="col-lg-6 col-md-7">
                 <div class="card">
                     <div class="card-header">
                         <div class="row">
@@ -46,18 +46,16 @@
                                         </div>
                                     </div>
                                     <div class="col-2">
-                                        <h5>
-                                            <a href="{{ url('/objek/' . $item->id . '/edit') }}">
-                                                <i class="fas fa-edit"></i></a>
-                                            {{-- <a href="{{ url('/objek/' . $item->id ) }}">
-                                                <i class="fas fa-eye"></i></a> --}}
+                                        <a href="{{ url('/objek/' . $item->id . '/edit') }}">
+                                            <h5><i class="fas fa-edit"></i></h5>
+                                        </a>
                                             @php
                                                 $linkdelete = url('/objek/' . $item->id);
                                             @endphp
-                                            <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
-                                                <i class="fas fa-trash"></i>
-                                            </a>
-                                        </h5>
+                                        <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
+                                            <h5><i class="fas fa-trash"></i></h5>
+                                        </a>
+                                        
                                     </div>
                                 </div>
                             </li>
