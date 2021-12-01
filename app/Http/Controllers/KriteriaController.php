@@ -31,7 +31,7 @@ class KriteriaController extends Controller
             $input['kriteria'] = $request['kriteria'];
             $input['bobot'] = $request['bobot'];
             Kriteria::create($input);
-            return redirect('/kriteria')->with('status', 'Berhasil menambahkan data');
+            return redirect('/dashboard')->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -78,7 +78,7 @@ class KriteriaController extends Controller
             $input['kriteria'] = $request['kriteria'];
             $input['bobot'] = $request['bobot'];
             Kriteria::where('id', $kriterium->id)->update($input);
-            return redirect('/kriteria')->with('status', 'Berhasil mengubah data');
+            return redirect('/dashboard')->with('status', 'Berhasil mengubah data');
         } catch (\Throwable $th) {
             throw $th;
         }
