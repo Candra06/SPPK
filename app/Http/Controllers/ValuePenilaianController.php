@@ -15,7 +15,7 @@ class ValuePenilaianController extends Controller
      */
     public function index()
     {
-        $data = ValuePenilaian::leftJoin('kriteria', 'kriteria.id', 'value_penilaian.id_kriteria')->select('kriteria.kriteria', 'value_penilaian.*')->get();
+        $data = ValuePenilaian::leftJoin('kriteria', 'kriteria.id', 'value_penilaian.id_kriteria')->select('kriteria.kriteria', 'value_penilaian.*')->orderBy('id_kriteria', 'asc')->get();
         return view('valuePenilaian.index', compact('data'));
     }
 
