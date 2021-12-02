@@ -10,6 +10,7 @@ Route::get('register', function () {return view('auth.register');});
 
 Route::get('dashboard', 'AdminController@dashboard');
 Route::get('compare', 'AdminController@compare');
+Route::post('compare/objek', 'AdminController@store');
 Route::get('compare/show', 'AdminController@show');
 Route::get('compare/result', 'AdminController@result');
 
