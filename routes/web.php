@@ -11,6 +11,7 @@ Route::get('register', function () {return view('auth.register');});
 Route::get('dashboard', 'AdminController@dashboard');
 Route::get('compare', 'AdminController@compare');
 Route::get('compare/show', 'AdminController@show');
+Route::get('compare/result', 'AdminController@result');
 
 Route::resource('kriteria', 'KriteriaController');
 Route::resource('objek', 'ObjekController');

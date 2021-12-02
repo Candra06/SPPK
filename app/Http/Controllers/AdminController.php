@@ -24,6 +24,12 @@ class AdminController extends Controller
     }
     public function show()
     {
-        return view('compare.show');
+        $objek = Objek::all();
+        return view('compare.show', compact('objek'));
+    }
+    public function result()
+    {
+        $objek = Objek::all();
+        return view('compare.result', compact('objek'));
     }
 }

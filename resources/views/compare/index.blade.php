@@ -39,7 +39,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-center">
-                            <a href="{{url('compare/show')}}" class="btn btn-sm btn-primary">Submit</a>
+                            <a href="{{url('compare/result')}}" class="btn btn-sm btn-primary">Submit</a>
                         </div>
                     </form>
                 </div>
