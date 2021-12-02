@@ -20,7 +20,7 @@
                                 <h5>{{ $i->kriteria }}</h5>
                             </div>
                             <div class="col">
-                                <p class="text-dark text-sm" style="height:80px;">{{ $i->value }}</p>
+                                <p class="text-dark text-sm" style="">{{ $i->value }}</p>
                             </div>
                         </div>
                         @endforeach
