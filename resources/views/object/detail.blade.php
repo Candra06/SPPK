@@ -9,7 +9,7 @@
             <div class="col-lg-4 col-sm-6 col-12">
                 <div class="card">
                     <!-- Card image -->
-                    <img class="card-img-top" src="{{ asset('storage/' . $objek->gambar) }}" alt="Image placeholder" style="max-height:200px; object-fit: contain;">
+                    <img class="card-img-top my-2" src="{{ asset('storage/' . $objek->gambar) }}" alt="Image placeholder" style="max-height:200px; object-fit: contain;">
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">{{ $objek->merk . ' ' . $objek->type }}</h4>

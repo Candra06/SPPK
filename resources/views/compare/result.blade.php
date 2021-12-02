@@ -10,8 +10,8 @@
             <div class="col-lg-4 col-sm-6 col-12">
                 <div class="card">
                     <!-- Card image -->
-                    <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="height:200px; object-fit: contain;">
-                    <span class="product-tags">1st</span>
+                    <img class="card-img my-2" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="height:200px; object-fit: contain;">
+                    <span class="product-tags">score</span>
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">{{ $item->merk . ' ' . $item->type }}</h4>

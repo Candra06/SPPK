@@ -28,7 +28,7 @@
                                             </div>
                                             <div class="col-4">
                                                 <a href="{{ url('/objek/' . $item->id ) }}">
-                                                    <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" style="object-fit: cover;">
+                                                    <img class="card-img" src="{{ asset('storage/' . $item->gambar) }}" style="object-fit: contain; max-height: 100px;">
                                                 </a>
                                             </div>
                                             <div class="col-5">

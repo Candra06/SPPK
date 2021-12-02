@@ -57,23 +57,24 @@
                                                 class="fas fa-plus"></span> Tambah Kriteria</button>
 
                                     </legend>
-                                    <div class="row p-3">
-                                        @foreach ($spek as $i)
-                                            <div class="col-3">
+                                    @foreach ($spek as $i)
+                                        <div class="row p-3 justify-content-center">
+                                            <div class="col-4">
                                                 <label for="">{{ $i->kriteria }}</label>
                                             </div>
-                                            <div class="col-3">
+                                            <div class="col-6">
                                                 <label for="">{{ $i->value }}</label>
-
+                                            </div>
+                                            <div class="col-2">
                                                 @php
-                                                    $linkdelete = url('/spek/' . $i->id . '/' . $objek->id);
+                                                $linkdelete = url('/spek/' . $i->id . '/' . $objek->id);
                                                 @endphp
                                                 <a onclick='modal_konfir("{{ $linkdelete }}")' href="#">
                                                     <i class="fas fa-trash"></i>
                                                 </a>
                                             </div>
-                                        @endforeach
-                                    </div>
+                                        </div>
+                                    @endforeach
                                 </fieldset>
                             </div>
 
