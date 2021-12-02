@@ -35,10 +35,12 @@ class SpecObjekController extends Controller
      */
     public function store(Request $request, $idobjek)
     {
+
         try {
             $input['id_objek'] = $idobjek;
             $input['id_kriteria'] = $request->kriteria;
             $input['id_value'] = $request->valueKriteria;
+
             SpecObjek::create($input);
             return redirect('/objek/'.$idobjek)->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
