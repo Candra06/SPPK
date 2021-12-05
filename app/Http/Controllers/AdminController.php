@@ -61,7 +61,9 @@ class AdminController extends Controller
             $data[$key]['type'] = $barang->type;
             $data[$key]['id_objek'] = $barang->id;
         }
-        return $data;
+        // return $data;
+        // dd($data);
+        return view('compare.result', compact('data'));
     }
     public function compare()
     {

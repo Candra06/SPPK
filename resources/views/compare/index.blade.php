@@ -16,8 +16,7 @@
                             <div class="card-body">
                                 <div id="smartphone">
                                     <div class="form-group">
-                                        <label class="form-control-label" for="exampleFormControlSelect1">Smartphone
-                                            1</label>
+                                        <label class="form-control-label" for="exampleFormControlSelect1">Smartphone :</label>
                                         <select class="form-control" id="exampleFormControlSelect1" name="objek[]">
                                             <option value="">Pilih Tipe Smartphone</option>
                                             @foreach ($objek as $item)
@@ -30,12 +29,11 @@
                                 <div class="row mt-3 mb-3 button-add">
                                     <div class="col-md-12 mb-3">
                                         <button id="remove-smartphone" type="button" class="btn btn-sm btn-danger"><span
-                                                class="fas fa-minus"></span> Hapus
-                                            Kriteria</button>
+                                                class="fas fa-minus"></span> Hapus Smartphone</button>
                                     </div>
                                     <div class="col-md-12">
                                         <button id="add-smartphone" type="button" class="btn btn-sm btn-success"><span
-                                                class="fas fa-plus"></span> Tambah Kriteria</button>
+                                                class="fas fa-plus"></span> Tambah Smartphone</button>
                                     </div>
                                 </div>
 
