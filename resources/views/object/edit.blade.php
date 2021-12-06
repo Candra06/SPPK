@@ -63,7 +63,11 @@
                                                 <label for="">{{ $i->kriteria }}</label>
                                             </div>
                                             <div class="col-6">
+                                                @if($i->kriteria == 'Harga')
+                                                <label for="">{{ number_format($i->value) }}</label>
+                                                @else
                                                 <label for="">{{ $i->value }}</label>
+                                                @endif
                                             </div>
                                             <div class="col-2">
                                                 @php
@@ -107,9 +111,7 @@
                                     <select class="form-control form-control-sm" name="kriteria" id="kriteria">
                                         <option value="">Pilih Kriteria</option>
                                         @foreach ($kriteria as $item)
-
-                                            <option value="{{ $item->id }}">{{ $item->kriteria }}
-                                            </option>
+                                            <option value="{{ $item->id }}">{{ $item->kriteria }}</option>
                                         @endforeach
                                     </select>
                                 </div>

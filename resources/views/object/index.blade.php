@@ -34,9 +34,6 @@
                                             <div class="col-5">
                                                 <h5>{{ $item->merk . ' ' . $item->type }}</h5>
                                             </div>
-                                            <div class="col-2">
-                                                <h5>score</h5>
-                                            </div>
                                         </div>
                                     </li>
                                 @endforeach

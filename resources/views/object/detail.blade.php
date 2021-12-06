@@ -12,18 +12,21 @@
                     <img class="card-img-top my-2" src="{{ asset('storage/' . $objek->gambar) }}" alt="Image placeholder" style="max-height:200px; object-fit: contain;">
                     <!-- Card body -->
                     <div class="card-body">
-                        <h4 class="card-title mb-0">{{ $objek->merk . ' ' . $objek->type }}</h4>
+                        <h4 class="card-title mb-3">{{ $objek->merk . ' ' . $objek->type }}</h4>
                         @foreach ($spek->sortBy('kriteria') as $i)
                         <div class="row">
                             <div class="col col-lg-5">
                                 <h5>{{ $i->kriteria }}</h5>
                             </div>
                             <div class="col">
-                                <p class="text-dark text-sm" style="">{{ $i->value }}</p>
+                                @if($i->kriteria == 'Harga')
+                                <p class="text-dark text-sm">Rp. {{ number_format($i->value) }}</p>
+                                @else
+                                <p class="text-dark text-sm">{{ $i->value }}</p>
+                                @endif
                             </div>
                         </div>
                         @endforeach
-                        <a href="#" class="btn btn-link px-0">View All</a>
                     </div>
                 </div>
             </div>
