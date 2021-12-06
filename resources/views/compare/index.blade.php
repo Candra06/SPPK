@@ -19,7 +19,10 @@
                                         <label class="form-control-label" for="exampleFormControlSelect1">Smartphone :</label>
                                         <select class="form-control" id="exampleFormControlSelect1" name="objek[]">
                                             <option value="">Pilih Tipe Smartphone</option>
-                                            @foreach ($objek as $item)
+                                            @foreach ($data as $objek)
+                                            <?php
+                                                $item = App\Objek::where('id', $objek['id'])->first();
+                                            ?>
                                                 <option value="{{$item->id}}">{{$item->merk.' '.$item->type}}</option>
                                             @endforeach
                                         </select>

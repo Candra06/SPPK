@@ -25,11 +25,13 @@ class KriteriaController extends Controller
         $request->validate([
             'kriteria' => 'required',
             'bobot' => 'required',
+            'type' => 'required',
         ]);
 
         try {
             $input['kriteria'] = $request['kriteria'];
             $input['bobot'] = $request['bobot'];
+            $input['type'] = $request['type'];
             Kriteria::create($input);
             return redirect('/dashboard')->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
@@ -72,11 +74,13 @@ class KriteriaController extends Controller
         $request->validate([
             'kriteria' => 'required',
             'bobot' => 'required',
+            'type' => 'required',
         ]);
 
         try {
             $input['kriteria'] = $request['kriteria'];
             $input['bobot'] = $request['bobot'];
+            $input['type'] = $request['type'];
             Kriteria::where('id', $kriterium->id)->update($input);
             return redirect('/dashboard')->with('status', 'Berhasil mengubah data');
         } catch (\Throwable $th) {

@@ -41,6 +41,9 @@
                                         <div class="col">
                                             <h5>Bobot</h5>
                                         </div>
+                                        <div class="col">
+                                            <h5>Tipe</h5>
+                                        </div>
                                     </div>
                                 </li>
                                 @php
@@ -58,6 +61,9 @@
                                             </div>
                                             <div class="col">
                                                 <h5>{{ $item->bobot }}</h5>
+                                            </div>
+                                            <div class="col">
+                                                <h5>{{ $item->type }}</h5>
                                             </div>
                                             <!-- <div class="col">
                                                 <h5>

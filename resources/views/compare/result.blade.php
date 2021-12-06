@@ -22,17 +22,21 @@
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-3">{{ $item->merk . ' ' . $item->type }}</h4>
-                        @foreach($item->spec as $spec)
+                        @foreach($item->spec->sortBy('id_kriteria') as $spec)
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col col-lg-5">
                                 <h5>{{ $spec->kriteria->kriteria }}</h5>
                             </div>
                             <div class="col">
+                                @if($spec->kriteria->kriteria == 'Harga')
+                                <p class="text-dark text-sm">Rp. {{ number_format($spec->value->value) }}</p>
+                                @else
                                 <p class="text-dark text-sm">{{ $spec->value->value }}</p>
+                                @endif
                             </div>
                         </div>
                         @endforeach
-                        <a href="#" class="btn btn-link px-0">View Product</a>
+                        <a href="{{ url('/objek/' . $item->id ) }}" class="btn btn-link px-0">View Product</a>
                     </div>
                 </div>
             </div>

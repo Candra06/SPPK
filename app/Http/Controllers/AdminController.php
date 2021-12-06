@@ -28,9 +28,10 @@ class AdminController extends Controller
         $normalisasi = [];
         $s = 0;
         foreach ($kriteria as $k) {
-            $normalisasi[$s] = Helper::normalisasi($k->bobot);
+            $normalisasi[$s] = Helper::normalisasi($k->bobot, $k->type);
             $s++;
         }
+
         // return $normalisasi;
         for ($i = 0; $i < count($request->objek); $i++) {
 
@@ -39,17 +40,20 @@ class AdminController extends Controller
                 ->select('detail_objek.id_objek', 'kriteria.bobot as bobot_kriteria', 'value_penilaian.bobot')
                 ->where('detail_objek.id_objek', $request->objek[$i])->get();
         }
+        
         // return $value;
         $valueKriteria = [];
         $valNormalisasi = [];
         $bobot = [];
+        
         for ($i = 0; $i < count($value); $i++) {
-            for ($j = 0; $j < count($value); $j++) {
+            for ($j = 0; $j < count($normalisasi); $j++) {
                 $valueKriteria[$j] = $value[$i][$j]['bobot'];
                 $valNormalisasi[$j] = $normalisasi[$j];
             }
             $bobot['data' . $i] = Helper::vector($request->objek[$i], $valueKriteria, $valNormalisasi);
         }
+        
         $st = collect($bobot);
         $sorted = $st->sortBy('bobot', SORT_REGULAR, true);
         $data = [];
@@ -67,8 +71,21 @@ class AdminController extends Controller
     }
     public function compare()
     {
+        $specObjek = SpecObjek::all();
+        $kriteria = Kriteria::count();
         $objek = Objek::all();
-        return view('compare.index', compact('objek'));
+        $data = [];
+        $i = 0;
+        foreach($objek as $o){
+            $check = SpecObjek::where('id_objek', $o->id)->count();
+            if($check == $kriteria){
+                $data[$i]['id'] = $o->id;
+                $data[$i]['merk'] = $o->merk;
+                $data[$i]['type'] = $o->type;
+            }
+            $i++;
+        }
+        return view('compare.index', compact('data'));
     }
     public function show()
     {

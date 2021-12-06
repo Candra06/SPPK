@@ -6,7 +6,7 @@ use App\Kriteria;
 
 class Helper
 {
-    public static function normalisasi($wn)
+    public static function normalisasi($wn, $type)
     {
         $kriteria = Kriteria::all();
         $sum = 0;
@@ -14,6 +14,12 @@ class Helper
             $sum += $key->bobot;
         }
         $normalisasi = $wn / $sum;
+        if($type == "cost"){
+            $normalisasi = $normalisasi*-1;
+        }
+        else{
+            $normalisasi = $normalisasi;
+        }
         return floatval(number_format((float)$normalisasi, 2, '.', ''));
     }
 

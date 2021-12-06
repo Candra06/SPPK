@@ -26,7 +26,7 @@ class ValuePenilaianController extends Controller
      */
     public function create()
     {
-        $data= Kriteria::all();
+        $data= Kriteria::orderBy('kriteria')->get();
         return view('valuePenilaian.create', compact('data'));
     }
 

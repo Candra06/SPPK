@@ -106,6 +106,9 @@
                                         <h5>Bobot</h5>
                                     </div>
                                     <div class="col">
+                                        <h5>Tipe</h5>
+                                    </div>
+                                    <div class="col">
                                         <h5>Aksi</h5>
                                     </div>
                                 </div>
@@ -127,6 +130,9 @@
                                         </div>
                                         <div class="col">
                                             <h5>{{ $item->bobot }}</h5>
+                                        </div>
+                                        <div class="col">
+                                            <h5>{{ $item->type }}</h5>
                                         </div>
                                         <div class="col">
                                             <h5>

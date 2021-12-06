@@ -23,6 +23,13 @@
                                 <label class="form-control-label">Bobot</label>
                                 <input class="form-control form-control-sm" type="number" name="bobot" value="{{$kriterium->bobot}}" placeholder="bobot">
                             </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Tipe</label>
+                                <select class="form-control form-control-sm" name="type" id="">
+                                    <option value="benefit">Benefit</option>
+                                    <option value="cost">Cost</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-footer text-center">
                             <button type="submit" class="btn btn-sm btn-primary">Submit</button>

@@ -13,10 +13,9 @@
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-0">{{ $objek->merk . ' ' . $objek->type }}</h4>
-                        <small class="text-muted">2019</small>
-                        @foreach ($spek as $i)
+                        @foreach ($spek->sortBy('kriteria') as $i)
                         <div class="row">
-                            <div class="col-lg-4">
+                            <div class="col col-lg-5">
                                 <h5>{{ $i->kriteria }}</h5>
                             </div>
                             <div class="col">

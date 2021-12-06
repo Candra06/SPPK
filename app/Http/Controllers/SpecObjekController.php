@@ -42,7 +42,7 @@ class SpecObjekController extends Controller
             $input['id_value'] = $request->valueKriteria;
             
             SpecObjek::create($input);
-            return redirect('/objek/'.$idobjek)->with('status', 'Berhasil menambahkan data');
+            return back()->with('status', 'Berhasil menambahkan data');
         } catch (\Throwable $th) {
             throw $th;
         }
@@ -92,7 +92,7 @@ class SpecObjekController extends Controller
     {
         try {
             SpecObjek::where('id', $id)->delete();
-            return redirect('/objek/'.$idobjek)->with('status', 'Berhasil menghapus data');
+            return redirect('/objek/'.$idobjek.'/edit')->with('status', 'Berhasil menghapus data');
         } catch (\Throwable $th) {
             throw $th;
         }
