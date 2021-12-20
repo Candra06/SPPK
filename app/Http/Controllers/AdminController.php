@@ -40,12 +40,12 @@ class AdminController extends Controller
                 ->select('detail_objek.id_objek', 'kriteria.bobot as bobot_kriteria', 'value_penilaian.bobot')
                 ->where('detail_objek.id_objek', $request->objek[$i])->get();
         }
-        
+
         // return $value;
         $valueKriteria = [];
         $valNormalisasi = [];
         $bobot = [];
-        
+
         for ($i = 0; $i < count($value); $i++) {
             for ($j = 0; $j < count($normalisasi); $j++) {
                 $valueKriteria[$j] = $value[$i][$j]['bobot'];
@@ -53,13 +53,17 @@ class AdminController extends Controller
             }
             $bobot['data' . $i] = Helper::vector($request->objek[$i], $valueKriteria, $valNormalisasi);
         }
-        
+
         $st = collect($bobot);
         $sorted = $st->sortBy('bobot', SORT_REGULAR, true);
         $data = [];
+        $normalisasiVektor = Helper::normalisasiVektor($sorted);
+        // return $sorted;
+        // return $normalisasiVektor;
 
-        foreach ($sorted as $key => $value) {
+        foreach ($normalisasiVektor as $key => $value) {
             $data[$key]['bobot'] = $value['bobot'];
+            $data[$key]['normalisasi_vektor'] = $value['normalisasi'];
             $barang = Objek::where('id', $value['id_objek'])->first();
             $data[$key]['merk'] = $barang->merk;
             $data[$key]['type'] = $barang->type;

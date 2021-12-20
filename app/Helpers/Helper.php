@@ -14,10 +14,9 @@ class Helper
             $sum += $key->bobot;
         }
         $normalisasi = $wn / $sum;
-        if($type == "cost"){
-            $normalisasi = $normalisasi*-1;
-        }
-        else{
+        if ($type == "cost") {
+            $normalisasi = $normalisasi * -1;
+        } else {
             $normalisasi = $normalisasi;
         }
         return floatval(number_format((float)$normalisasi, 2, '.', ''));
@@ -39,5 +38,27 @@ class Helper
         $data['bobot'] = $sum;
 
         return $data;
+    }
+
+    public static function normalisasiVektor($vektor)
+    {
+        $sumVektor = 0;
+        foreach ($vektor as $value) {
+            $sumVektor += $value['bobot'];
+        }
+        $norm = [];
+        $tmp = [];
+        $i = 0;
+        foreach ($vektor as $key => $value) {
+
+            $tmp['id_objek'] = $value['id_objek'];
+            $tmp['bobot'] = $value['bobot'];
+            $hitung = $value['bobot'] / $sumVektor;
+            $tmp['normalisasi'] = number_format((float)$hitung, 2, '.', '');
+            $norm['data' . $i] = $tmp;
+            $i++;
+        }
+
+        return $norm;
     }
 }
