@@ -18,7 +18,8 @@
                     <!-- Card image -->
                     <img class="card-img my-2" src="{{ asset('storage/' . $item->gambar) }}" alt="Image placeholder" style="height:200px; object-fit: contain;">
                     <span class="product-tags">Rank : {{ $peringkat }}</span>
-                    <span class="product-tags mt-4">{{ substr($objek['bobot'],0,4) }}</span>
+                    {{-- <span class="product-tags mt-4">{{ substr($objek['bobot'],0,4) }}</span> --}}
+                    <span class="product-tags mt-4">{{ substr($objek['normalisasi_vektor'],0,5) }}</span>
                     <!-- Card body -->
                     <div class="card-body">
                         <h4 class="card-title mb-3">{{ $item->merk . ' ' . $item->type }}</h4>

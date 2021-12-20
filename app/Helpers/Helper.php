@@ -54,7 +54,7 @@ class Helper
             $tmp['id_objek'] = $value['id_objek'];
             $tmp['bobot'] = $value['bobot'];
             $hitung = $value['bobot'] / $sumVektor;
-            $tmp['normalisasi'] = number_format((float)$hitung, 2, '.', '');
+            $tmp['normalisasi'] = number_format((float)$hitung, 10, '.', '');
             $norm['data' . $i] = $tmp;
             $i++;
         }
